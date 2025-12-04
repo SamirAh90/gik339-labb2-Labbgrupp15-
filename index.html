@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sv"> 
+<!-- Deklarerar att dokumentet använder HTML5. Språket sätts till svenska. -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Anger teckenkodning så att specialtecken (ÅÄÖ m.m.) fungerar korrekt. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Gör sidan responsiv på mobiler genom att matcha skärmens bredd. -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Länkar en extern CSS-fil som innehåller sidans styling. -->
+
+    <!-- Ovanför h1 (utanför container) -->
+
+
+
+    <script src="script.js" defer></script>
+    <!-- Länkar extern JavaScript-fil. 
+         "defer" gör att scriptet laddas i bakgrunden och körs först när HTML är färdigbearbetad,
+         vilket förbättrar prestanda och undviker fel när element inte laddats ännu. -->
+
+    <!--
+        Kommentarblock som beskriver hur JavaScript kan laddas på olika sätt:
+
+        1. Skriva JS direkt i HTML med <script>-taggar.
+        2. Länka extern JS-fil.
+        3. Använda "defer" för att skjuta upp körningen tills HTML laddats.
+        4. Lägga script längst ner i <body> så att HTML hinner laddas först.
+
+        Förklarar även hur placeringen av <script>-taggar påverkar laddningen.
+        Här används defer eftersom det låter scriptet ligga i <head>
+        utan att blockera sidans rendering.
+    -->
+
+    <title>Labb 2 - Grupp 15 </title>
+    <!-- Sidans titel som visas i fliken i webbläsaren. -->
+</head>
+
+<body>
+
+    <h1>GIK339 – LABB 2 (Grupp 15) </h1>
+    <p>SKAPA OCH ÄNDRA HTML VIA JAVASCRIPT </p>
+    <!-- Sidans huvudrubrik (notera att rubriken och title har olika gruppnummer). -->
+
+    <div class="container">
+        <!-- Behållare för alla formulärets inputs och resultatboxen. -->
+
+        <div>
+            <label for="color">Färg</label>
+            <!-- Etikett kopplad till textfältet för färg. -->
+
+            <input type="text" name="color" id="color" class="textfield">
+            <!-- Textfält där användaren skriver in en färg (t.ex. "red" eller "#ff0000"). Innehållet rensas inte även om man trycker på tabort knappet.-->
+        </div>
+
+        <div>
+            <label for="content">Innehåll</label>
+            <!-- Etikett kopplad till textfältet för innehåll.  Innehållet rensas även inte här om man trycker på tabort knappet.-->
+            <input type="text" name="content" id="content" class="textfield">
+            <!-- Textfält där användaren kan skriva text som ska visas i boxen. -->             
+        </div>
+
+        <div>
+            <label for="divStyle">BoX</label>
+            <!-- i JavaScript använder vi document.querySelector() och väljer elementet via ID #divStyle  -->
+
+            <input type="checkbox" name="divStyle" id="divStyle" class="checkbox">
+            <!-- Checkbox som användaren kan kryssa i för att aktivera en stil. -->
+        </div>
+
+        <button id="actionBtn">Ta bort</button>
+        <!-- Knapp som troligen triggar funktioner i script.js (t.ex. ta bort en box). -->
+      
+        <div id="outputBox"></div>
+        <!-- Tom behållare där JavaScript kan lägga till innehåll dynamiskt.  Innehållet rensas när om man trycker på tabort knappet.-->
+
+        <h2>Öppna LiveServer i VisualStudio Code för att se scriptets resultat. Därefter Öppna DevTools och välja Console (F12 -> Console) för att se JavaScripts magic</h2>
+      
+      
+    
+      
+    </p>
+    </div>
+
+</body>
+</html>
